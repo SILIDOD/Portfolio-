@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Web Dev & Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">Hextech </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#school-services">School Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Martin</span></h1>
+                <p>Web Developer | Multimedia Specialist | School Services</p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Profile Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom websites, web applications, and e-commerce solutions using modern technologies.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera-retro"></i>
+                    <h3>Photo Editing</h3>
+                    <p>Professional photo retouching, restoration, and creative editing services.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Editing</h3>
+                    <p>High-quality video editing, color grading, and post-production services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="photo">Photo Editing</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Items will be added dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- School Services Section -->
+    <section id="school-services" class="school-services">
+        <div class="container">
+            <h2 class="section-title">School Services</h2>
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="registration">School Registration</button>
+                <button class="tab-btn" data-tab="payment">Fee Payment</button>
+                <button class="tab-btn" data-tab="status">Check Status</button>
+            </div>
+            
+            <div class="tab-content active" id="registration">
+                <h3>School Registration Assistance</h3>
+                <form id="school-reg-form">
+                    <div class="form-group">
+                        <label for="student-name">Student's Full Name</label>
+                        <input type="text" id="student-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parent-email">Parent/Guardian Email</label>
+                        <input type="email" id="parent-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="parent-phone">Parent/Guardian Phone</label>
+                        <input type="tel" id="parent-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="school-level">School Level</label>
+                        <select id="school-level" required>
+                            <option value="">-- Select --</option>
+                            <option value="primary">Primary School</option>
+                            <option value="secondary">Secondary School</option>
+                            <option value="university">University</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="school-name">School Name</label>
+                        <input type="text" id="school-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="documents">Upload Required Documents</label>
+                        <input type="file" id="documents" multiple>
+                    </div>
+                    <button type="submit" class="btn">Submit Registration Request</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="payment">
+                <h3>School Fee Payment Assistance</h3>
+                <form id="fee-payment-form">
+                    <div class="form-group">
+                        <label for="student-id">Student ID/Registration Number</label>
+                        <input type="text" id="student-id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fee-type">Fee Type</label>
+                        <select id="fee-type" required>
+                            <option value="">-- Select --</option>
+                            <option value="tuition">Tuition Fees</option>
+                            <option value="acceptance">Acceptance Fees</option>
+                            <option value="hostel">Hostel Fees</option>
+                            <option value="other">Other School Fees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fee-amount">Amount (₦)</label>
+                        <input type="number" id="fee-amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method</label>
+                        <select id="payment-method" required>
+                            <option value="">-- Select --</option>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="transfer">Bank Transfer</option>
+                            <option value="ussd">USSD</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Proceed to Payment</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="status">
+                <h3>Check Registration/Payment Status</h3>
+                <form id="status-check-form">
+                    <div class="form-group">
+                        <label for="reference-number">Reference Number</label>
+                        <input type="text" id="reference-number" required>
+                    </div>
+                    <button type="submit" class="btn">Check Status</button>
+                </form>
+                <div id="status-result" class="hidden">
+                    <h4>Status Details</h4>
+                    <div class="status-details">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i>tboykritical@gmail.com </p>
+                    <p><i class="fas fa-phone"></i> +234 901 751 737 1</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Complete Your Payment</h3>
+            <div class="payment-details">
+                <p>Amount: <span id="modal-amount">₦0.00</span></p>
+                <p>Description: <span id="modal-description">School Fees Payment</span></p>
+            </div>
+            <div id="card-payment" class="payment-method">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" placeholder="Kolawole Martin ">
+                </div>
+                <button id="confirm-payment" class="btn">Pay Now</button>
+            </div>
+            <div id="transfer-payment" class="payment-method hidden">
+                <p>Please make a transfer to:</p>
+                <p><strong>Bank Name:</strong> Access Bank</p>
+                <p><strong>Account Name:</strong> Your Business Name</p>
+                <p><strong>Account Number:</strong> 1234567890</p>
+                <p>After payment, upload your receipt below:</p>
+                <input type="file" id="receipt-upload">
+                <button id="submit-receipt" class="btn">Submit Receipt</button>
+            </div>
+            <div id="ussd-payment" class="payment-method hidden">
+                <p>Dial <strong>*123*1#</strong> on your phone</p>
+                <p>Select "Pay Bills"</p>
+                <p>Enter merchant code <strong>12345</strong></p>
+                <p>Enter amount and complete payment</p>
+                <button id="confirm-ussd" class="btn">I've Completed Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
